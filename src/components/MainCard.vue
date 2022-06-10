@@ -51,13 +51,17 @@ main{
     background-color: #1E2D3B;
     width: 100%;
     height: calc(100vh - 75px);
+    display: flex;
+    justify-content: center;
    
 
     #container{
         width: 80%;
-        margin: 0 auto;
         display: flex;
+        align-content: center;
         flex-wrap: wrap;
+           
+       
     }
 }
 
