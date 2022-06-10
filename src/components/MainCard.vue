@@ -1,6 +1,11 @@
 <template>
    <main>
         <div id="container">
+             <CardItem v-for="(card, i ) in listAlbum" :key="i"
+            :img = "card.poster"
+            :author = "card.author"
+            :title = "card.title"
+            :year = "card.year"/>
 
         </div>
    </main>
@@ -8,11 +13,12 @@
 
 <script>
 import axios from "axios";
+import CardItem from './CardItem.vue'
 
 export default {
   name: 'MainCard',
   components: {
-  
+   CardItem
 
   },
   data(){
@@ -22,7 +28,11 @@ export default {
     }
   },
   created(){
-    axios.get(this.apiUrl)
+      this.getList();
+  },
+  methods: {
+    getList() {
+        axios.get(this.apiUrl)
     .then((result) => {
         this.listAlbum = result.data;
         console.log(result);
@@ -30,6 +40,7 @@ export default {
     .catch((error)  => {
        console.log("errore", error);
     })
+    }
   }
  
 
@@ -51,6 +62,7 @@ main{
         width: 80%;
         min-height: 600px;
         margin: 0 auto;
+        display: flex;
     }
 }
 
