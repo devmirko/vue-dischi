@@ -29,8 +29,27 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .card{
-    flex-basis: calc( 100% / 5 );
-    height: 200px;
+    width: 15%;
+    height: 350px;
+    margin-left: 10px;
+    background-color: #2E3A46;
+     
+         .box_image{
+            width: 100%;
+            height: 50%;
+            
+
+              img{
+                width: 100%;
+                height: 100%;
+              }
+         }
+
+         .box_text{
+            width: 100%;
+            height: 50%;
+            text-align: center;
+         }
 }
 
 

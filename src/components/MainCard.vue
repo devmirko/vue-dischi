@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from "axios"
 import CardItem from './CardItem.vue'
 
 export default {
@@ -31,7 +31,7 @@ export default {
     getList() {
         axios.get(this.apiUrl)
     .then((result) => {
-        this.listAlbum = result.data;
+        this.listAlbum = result.data.response;
         console.log(result);
     })
     .catch((error)  => {
@@ -51,15 +51,13 @@ main{
     background-color: #1E2D3B;
     width: 100%;
     height: calc(100vh - 75px);
-    display: flex;
-    justify-content: center;
-    align-content: center;
+   
 
     #container{
         width: 80%;
-        min-height: 600px;
         margin: 0 auto;
         display: flex;
+        flex-wrap: wrap;
     }
 }
 
