@@ -1,12 +1,12 @@
 <template>
 <div class="card">
     <div class="box_image">
-        <img :src="img" :alt="title">
+        <img :src="listObject.poster" :alt="listObject.title">
     </div>
     <div class="box_text">
-        <h3>{{title}}</h3>
-        <span>{{author}}</span><br>
-        <span>{{year}}</span>
+        <h3>{{listObject.title}}</h3>
+        <span>{{listObject.author}}</span><br>
+        <span>{{listObject.year}}</span>
     </div>
    
 
@@ -19,10 +19,7 @@
 export default {
  name: 'CardItem',
  props: {
-    img: String,
-    author: String,
-    title: String, 
-    year: String,
+    listObject: Object
    
  }
 }

@@ -2,10 +2,7 @@
    <main>
         <div id="container">
              <CardItem v-for="(card, i ) in listAlbum" :key="i"
-            :img = "card.poster"
-            :author = "card.author"
-            :title = "card.title"
-            :year = "card.year"/>
+            :listObject ="card" />
 
         </div>
    </main>
