@@ -58,6 +58,8 @@ export default {
     filteredlistAlbum(){
         if (this.userSearch ==="") {
            return this.listAlbum; 
+        } else if (this.userSearch ==="all") {
+           return this.listAlbum; 
         } else {
        return this.listAlbum.filter(card => {
             return card.genre.toLowerCase().includes(this.userSearch.toLowerCase());
