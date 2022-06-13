@@ -1,7 +1,7 @@
 <template>
 <div class="container">
     <select  v-model="selected"
-    @change ="$emit('mySearch', selected)">
+    @change = "dateOut" >
         <option value="all">all</option>
         <option value="pop">pop</option>
         <option value="rock">rock</option>
@@ -23,6 +23,11 @@ export default {
   data() {
     return {
       selected: ''
+    }
+  },
+  methods: {
+    dateOut(){
+       this.$emit('mySearch', this.selected)
     }
   }
 }
