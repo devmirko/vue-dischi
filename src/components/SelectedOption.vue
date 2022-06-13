@@ -1,6 +1,7 @@
 <template>
 <div class="container">
-    <select  v-model="selected">
+    <select  v-model="selected"
+    @keyup.enter="$emit('mySearch', selected)">
         <option value="all">all</option>
         <option value="pop">pop</option>
         <option value="rock">rock</option>
